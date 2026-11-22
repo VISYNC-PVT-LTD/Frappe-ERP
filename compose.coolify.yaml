@@ -116,7 +116,7 @@ services:
       - --skip-character-set-client-handshake
       - --innodb-snapshot-isolation=OFF
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in Coolify}
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD:?Set DB_PASSWORD in Coolify}"
       MARIADB_AUTO_UPGRADE: "1"
     volumes:
       - db-data:/var/lib/mysql
